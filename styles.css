@@ -1,0 +1,37 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: circular-motion 5s linear infinite;
+}
+
+@keyframes circular-motion {
+    0% {
+        transform: translate(-50%, 0) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, 0) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
